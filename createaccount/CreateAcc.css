@@ -2,156 +2,282 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body{
+body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background: linear-gradient(to right, #f5dfa2, #ec1212);
-    background-image: linear-gradient(rgba(236, 210, 153, 0.5), rgba(253, 0, 0, 0.5)), url('./639482959_4196103657320225_7354423598264022459_n.jpg');
+    min-height: 100vh;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(184, 65, 52, 0.3) 0%, hwb(0 23% 13% / 0.3) 100%), 
+                url('./photo_2026-03-05_18-28-16.jpg') center/cover no-repeat fixed;
 }
 
-.container{
+.container {   
     background: white;
-    padding: 25px 30px;
-    border-radius: 8px;
+    padding: 30px;
+    border-radius: 12px;
     width: 100%;
-    max-width: 700px;
+    max-width: 500px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
 }
 
-.container .title{
-    font-size: 25px;
-    font-weight: 500;
+.container .title {
+    font-size: 28px;
+    font-weight: 600;
     position: relative;
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 10px;
+    margin-bottom: 30px;
+    color: #333;
 }
 
-/* logo next to title */
-.container .title .title-logo{
-    height: 30px;
+.container .title .title-logo {
+    height: 60px;
     width: auto;
+    border-radius: 4px;
 }
 
-.container .title::before{
+.container .title::after {
     content: "";
     position: absolute;
-    left: 0;
-    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
     height: 3px;
-    width: 30px;
-    background: linear-gradient(to right, #e6e279, #990808);
+    width: 60px;
+    border-radius: 2px;
 }
 
-.container form .user-details{
+.container form .user-details {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 20px 0 12px 0;
+    margin-top: 15px;
 }
 
-form .user-details .input-box{
-    margin-bottom: 20px 0 12px 0;
-    width: calc(100% / 2 - 20px);
+form .user-details .input-box {
+    margin-bottom: 10px;
+    width: calc(50% - 10px);
 }
-.user-details .input-box .user-details{
+
+.user-details .input-box .details {
     display: block;
-    font-weight: 500;
-    margin-bottom: 5px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+    font-size: 14px;
 }
-.user-details .input-box input{
+
+.user-details .input-box input {
     height: 45px;
     width: 100%;
     outline: none;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    padding-left: 15px;
-    font-size: 16px;
+    border-radius: 6px;
+    border: 1.5px solid #ddd;
+    padding: 0 15px;
+    font-size: 15px;
     transition: all 0.3s ease;
-}
-.user-details .input-box input:focus,
-.user-details .input-box input:valid{
-    border-color:  #ff4747;
+    background-color: #f9f9f9;
 }
 
-form .gender-details .gender-title{
-    font-size: 20px;
-    font-weight: 500;
+.user-details .input-box input:focus {
+    border-color: #ff4747;
+    background-color: white;
+    box-shadow: 0 0 8px rgba(255, 71, 71, 0.1);
 }
 
-form .gender-details .category{
+.user-details .input-box input::placeholder {
+    color: #999;
+}
+
+form .gender-details {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+form .gender-details .gender-title {
+    font-size: 14px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 12px;
+    color: #333;
+}
+
+form .gender-details .category {
     display: flex;
-    width: 80%;
-    margin: 14px 0;
-    justify-content: space-between;
+    gap: 40px;
+    margin: 8px 0;
 }
 
-.gender-details .category label{
+.gender-details .category label {
     display: flex;
     align-items: center;
     cursor: pointer;
+    user-select: none;
 }
 
-.gender-details .category .dot{
-    height: 18px;
-    width: 18px;
+.gender-details .category label .gender {
+    font-size: 15px;
+    color: #333;
+    font-weight: 500;
+}
+
+.gender-details .category .dot {
+    height: 20px;
+    width: 20px;
     border-radius: 50%;
-    margin-right: 10px;
-    background: #d9d9d9;
-    border: 2px solid #ff4747;
+    margin-right: 8px;
+    background: #f0f0f0;
+    border: 2px solid #ddd;
     transition: all 0.3s ease;
 }
+
+form input[type="radio"] {
+    display: none;
+}
+
 #dot-1:checked ~ .category .one,
-#dot-2:checked ~ .category .two{
-    background: #ff4747;
+#dot-2:checked ~ .category .two {
+    background: #eb4141;
     border-color: #ff4747;
 }
 
-form input[type="radio"]{
-    display: none;
-}
-form .button{
-    height: 45px;
-    margin: 45px 0;
-}
-form .button input{
-    height: 100%;
+form .button {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0 0 auto;
     width: 100%;
+    max-width: 430px;
+}
+
+form .button input {
+    height: 40px;
+    flex: 1;
     border: none;
     color: white;
-    font-size: 18px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    border-radius: 5px;
-    background: linear-gradient(to right, #e6e279, #990808);
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    border-radius: 6px;
+    background: linear-gradient(135deg, #962e26 0%, #990808 100%);
     cursor: pointer;
     transition: all 0.3s ease;
-}   
-
-form .button input:hover{
-    background: linear-gradient(to right, #e6e279, #990808);
+    text-transform: uppercase;
 }
-    
-@media (max-width: 584px){
-    .container{
+
+form .button input[type="button"] {
+    background: linear-gradient(135deg, #999 0%, #666 100%);
+}
+
+form .button input[type="button"]:hover {
+    box-shadow: 0 8px 20px rgba(100, 100, 100, 0.3);
+}
+form .button input:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 71, 71, 0.3);
+}
+
+form .button input:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 25px 15px;
         max-width: 100%;
+        width: 100%;
     }
-    form .user-details .input-box{
+
+    .container .title {
+        font-size: 22px;
+        margin-bottom: 25px;
+    }
+
+    .container .title .title-logo {
+        height: 50px;
+    }
+
+    form .user-details {
+        flex-direction: column;
+    }
+
+    form .user-details .input-box {
+        width: 100%;
         margin-bottom: 15px;
+    }
+
+    .user-details .input-box .details {
+        font-size: 13px;
+        margin-bottom: 6px;
+    }
+
+    .user-details .input-box input {
+        height: 40px;
+        font-size: 14px;
+        padding: 0 12px;
+    }
+
+    form .gender-details {
+        margin-bottom: 15px;
+    }
+
+    form .gender-details .gender-title {
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+
+    form .gender-details .category {
+        flex-direction: column;
+        gap: 12px;
+        margin: 6px 0;
+    }
+
+    form .button {
+        flex-direction: column;
+        margin: 20px 0 0 0;
+        max-width: 100%;
         width: 100%;
     }
-    form .gender-details .category{
+
+    form .button input {
+        height: 44px;
+        font-size: 13px;
         width: 100%;
     }
-    .container form .user-details{
-        max-height: 300px;
-        overflow-y: scroll;
-    }   
-    .user-details::-webkit-scrollbar{
-        width: 0;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px 12px;
+        border-radius: 8px;
+    }
+
+    .container .title {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .container .title .title-logo {
+        height: 45px;
+    }
+
+    .user-details .input-box input {
+        height: 38px;
+        font-size: 13px;
+        padding: 0 10px;
+    }
+
+    form .button input {
+        height: 42px;
+        font-size: 12px;
     }
 }

@@ -20,16 +20,38 @@
                     <input type="text" placeholder="Enter Your Name" required>
                 </div>
                 <div class="input-box">
+                    <span class="details">Course/Section</span>
+                <input list="course" name="course" placeholder="Enter Your Section (CS/IT/ACT)" required>
+                    <datalist id="course">
+                        <option value="BSCS 1-A">
+                        <option value="BSCS 1-B">
+                        <option value="BSIT 1-A">
+                        <option value="BSIT 1-B">
+                        <option value="BSCS 2-A">
+                        <option value="BSCS 2-B">
+                        <option value="BSIT 2-A">
+                        <option value="BSIT 2-B">
+                        <option value="BSCS 3-A">
+                        <option value="BSCS 3-B">
+                        <option value="BSIT 3-A">
+                        <option value="BSIT 3-B">
+                        <option value="BSCS 4-A">
+                        <option value="BSCS 4-B">
+                        <option value="BSIT 4-A">
+                        <option value="BSIT 4-B">
+                        <option value="ACT AD 1-A">
+                        <option value="ACT AD 1-B">
+                        <option value="ACT NT 2-A">
+                        <option value="ACT NT 2-B">
+                    </datalist>
+                </div>
+                <div class="input-box">
                     <span class="details">Username</span>
                     <input type="text" placeholder="Enter Your Username" required>
                 </div>
                 <div class="input-box">
                     <span class="details">WMSU Email</span>
                     <input type="email" placeholder="Enter Your Email" required>
-                </div>
-                <div class="input-box">
-                    <span class="details">Phone Number</span>
-                    <input type="text" placeholder="Enter Your Phone Number" required>
                 </div>
                 <div class="input-box">
                     <span class="details">Password</span>
@@ -55,11 +77,12 @@
                     </div>
                 </div>
                 <div class="button">
-                    <input type="submit" value="Create Account">
+                    <input type="submit" value="Create Account" onclick="window.location.href='../LoginPage.html'">
+                    <input type="button" value="Cancel" onclick="window.location.href='../LoginPage.html'">
                 </div>
-            </div>
+                
+            </div>  
         </form>
     </div>
     
-</body>
-</html>
+</body>    
