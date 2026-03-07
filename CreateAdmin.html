@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Create Account</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-image: url('background.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      font-family: Arial, Helvetica, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    
+    .box {
+      background: white;
+      border-radius: 10px;
+      padding: 0;
+      width: 100%;
+      max-width: 450px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    .top-bar {
+      background: #800000;
+      padding: 18px 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    
+    .school-logo {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 2px solid white;
+      flex-shrink: 0;
+    }
+
+    .school-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .top-bar-text h1 { 
+      color: white;
+      font-size: 19px;
+    }
+
+    .top-bar-text p {
+      color: #ffcccc;
+      font-size: 12px;
+      margin-top: 2px;
+    }
+
+    .form-body {
+      padding: 20px 24px 22px;
+    }
+
+    .notice {
+      background: #fff0f0;
+      border-left: 4px solid #800000;
+      padding: 10px 13px;
+      border-radius: 5px;
+      font-size: 12px;
+      color: #800000;
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      font-size: 12px;
+      font-weight: bold;
+      color: #800000;
+      margin-bottom: 4px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 9px 11px;
+      border: 1.5px solid #ddd;
+      border-radius: 6px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      color: #333;
+      outline: none;
+      margin-bottom: 13px;
+      background: #fffafa;
+    }
+
+    input:focus, select:focus {
+      border-color: #800000;
+    }
+
+    input::placeholder {
+      color: #bbb;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 11px;
+    }
+
+    .err {
+      font-size: 11px;
+      color: red;
+      margin-top: -10px;
+      margin-bottom: 10px;
+      display: none;
+    }
+
+    .strength {
+      height: 4px;
+      background: #eee;
+      border-radius: 4px;
+      margin-top: -9px;
+      margin-bottom: 4px;
+    }
+
+    .strength-fill {
+      height: 100%;
+      border-radius: 4px;
+      width: 0%;
+      transition: width 0.3s, background 0.3s;
+    }
+    
+    .strength-text {
+      font-size: 10px;
+      color: #999;
+      text-align: right;
+      margin-bottom: 13px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    button {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .btn-clear {
+      background: white;
+      border: 1.5px solid #ddd;
+      color: #888;
+    }
+
+    .btn-clear:hover { 
+      border-color: #800000;
+      color: #800000;
+    }
+
+    .btn-submit {
+      background: #800000;
+      color: white;
+    }
+
+    .btn-submit:hover{
+      background: #5c0000;
+    }
+
+    .login-link {
+      text-align: center;
+      font-size: 11px;
+      color: #999;
+      margin-top: 13px;
+    }
+
+    .login-link a {
+      color: #800000;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .success {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(80,0,0,0.88);
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 12px;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .success.show {
+      display: flex;
+    }
+
+    .success h2 {
+      color: white;
+      font-size: 22px;
+    }
+
+    .success p {
+      color: #ffcccc;
+      font-size: 13px;
+      max-width: 280px;
+    }
+
+    .success button {
+      margin-top: 5px;
+      width: 180px;
+      flex: none;
+      background: white;
+      color: #800000;
+      font-weight: bold;
+    }
+    
+  </style>
+</head>
+<body>
+
+<div class="box">
+  <div class="top-bar">
+    <div class="school-logo">
+      <img src="wmsu.jpg" alt="wmsuphoto">
+    </div>
+    <div class="top-bar-text">
+      <h1>Create Account</h1>
+      <p>For school faculty only</p>
+    </div>
+  </div>
+
+  <div class="form-body">
+    <div class="notice">
+      You need your <strong>Professor ID</strong> to sign up.
+    </div>
+
+    <form id="myForm">
+
+      <label>Professor ID</label>
+      <input type="text" id="profId" placeholder="WMSU-2024-0001" />
+      <p class="err" id="idErr">Please enter a valid ID (PROF-YYYY-XXXX)</p>
+
+      <div class="row">
+        <div>
+          <label>Last name</label>
+          <input type="text" id="fname" placeholder="Juan" />
+        </div>
+        <div>
+          <label>First Name</label>
+          <input type="text" id="lname" placeholder="Dela Cruz" />
+        </div>
+      </div>
+
+      <label>Middle Name</label>
+      <input type="text" id="mname" placeholder="Santos" />
+
+      <label>Email</label>
+      <input type="email" id="email" placeholder="Name@wmsu.edu.ph" />
+
+      <label>Department</label>
+      <select id="dept">
+        <option value="cs">Computer Science</option>
+        <option value="it">Information Technology</option>
+      </select>
+
+      <label>Password</label>
+      <input type="password" id="password" placeholder="Create a password" />
+      <div class="strength"><div class="strength-fill" id="fill"></div></div>
+      <p class="strength-text" id="strengthText"></p>
+
+      <label>Confirm Password</label>
+      <input type="password" id="confirm" placeholder="Repeat password" />
+      <p class="err" id="pwErr">Passwords don't match!</p>
+
+      <div class="buttons">
+        <button type="reset" class="btn-clear">Clear</button>
+        <button type="submit" class="btn-submit">Create Account</button>
+      </div>
+
+      <p class="login-link">Already have an account? <a href="#">Log in</a></p>
+
+    </form>
+  </div>
+</div>
+
+<div class="success" id="successScreen">
+  <h2>Account Created!</h2>
+  <p>Your professor account is ready.</p>
+  <button id="goBackBtn">Go Back</button>
+</div>
+
+</body>
+</html>
