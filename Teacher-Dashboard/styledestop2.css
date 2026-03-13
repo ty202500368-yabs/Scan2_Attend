@@ -1,4 +1,4 @@
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+*{ margin: 0; padding: 0; box-sizing: border-box; }
 
 html, body {
   height: 100%;
@@ -14,7 +14,6 @@ html, body {
   min-height: 100vh;
 }
 
-/* ── HEADER ── */
 .header {
   background: var(--maroon-dark);
   height: 64px;
@@ -76,7 +75,6 @@ html, body {
 }
 @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.25} }
 
-/* ── PICKER ── */
 .picker-screen {
   flex: 1;
   display: flex;
@@ -170,7 +168,6 @@ html, body {
   transition: background 0.15s;
 }
 
-/* ── FOOTER ── */
 .page-footer {
   text-align: center;
   padding: 1.25rem;
