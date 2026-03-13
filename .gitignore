@@ -1,0 +1,20 @@
+# VS Code settings with sensitive API keys
+.vscode/settings.json
+
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDE
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db

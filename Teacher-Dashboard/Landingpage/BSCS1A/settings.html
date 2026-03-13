@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WMSU AttendTrack — Settings</title>
+<link rel="stylesheet" href="../styledestop.css">
+<link rel="stylesheet" href="../portal-base.css">
+</head>
+<body>
+
+<!-- Mobile sidebar toggle -->
+<input type="checkbox" class="ctrl" id="mob-menu">
+<label for="mob-menu" class="mob-overlay"></label>
+
+<div class="app">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-brand">
+      <label for="mob-menu" class="hamburger"><span></span><span></span><span></span></label>
+      <div class="header-logo"><img src="../wmsulogo.jpg" alt="WMSU"></div>
+      <div>
+        <div class="header-title">WMSU AttendTrack</div>
+        <div class="header-sub">Teacher Portal</div>
+      </div>
+    </div>
+    <div class="header-right">
+      <div class="header-section-badge">📗 BSCS 1A</div>
+      <div class="session-chip">📗 &nbsp;Morning Session · 10:00 - 11:00 AM</div>
+      <div class="live-pill"><span class="live-dot"></span> Live</div>
+    </div>
+  </header>
+
+  <div class="body-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-section-label">Active Section</div>
+      <div class="sec-chip">
+        <div class="sec-chip-label">Section</div>
+        <div class="sec-chip-name">BSCS 1A</div>
+        <div class="sec-chip-sub">BS Computer Science</div>
+      </div>
+      <div class="sidebar-section-label nav-label-top">Navigation</div>
+      <nav class="sidebar-nav">
+        <a href="BSCS1A.html"   class="nav-item"><span class="nav-icon">⛶</span> QR Scanner</a>
+        <a href="BSCS1Adashboard.html" class="nav-item"><span class="nav-icon">📊</span> Dashboard</a>
+        <a href="schedule.html"  class="nav-item"><span class="nav-icon">🗓️</span> Schedule</a>
+        <div class="nav-divider"></div>
+        <a href="../../index.html"     class="nav-item"><span class="nav-icon">🏫</span> Change Section</a>
+        <a href="#"              class="nav-item"><span class="nav-icon">⬇</span> Export CSV</a>
+        <div class="nav-divider"></div>
+        <a href="settings.html"  class="nav-item active"><span class="nav-icon">⚙️</span> Settings</a>
+        <a href="../../index.html"     class="nav-item"><span class="nav-icon">🔒</span> Logout</a>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="admin-chip">
+          <div class="admin-avatar">TC</div>
+          <div>
+            <div class="admin-name">Mr. Santos</div>
+            <div class="admin-role">Faculty · CCS Department</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="portal-main">
+
+      <div class="ctx-bar">
+        <div class="ctx-left">
+          <span class="ctx-icon">📗</span>
+          <div>
+            <div class="ctx-name">BSCS 1A</div>
+            <div class="ctx-meta">Bachelor of Science in Computer Science · First Semester</div>
+          </div>
+        </div>
+        <div class="ctx-chips">
+          <span class="ctx-chip">🕗 10–11 AM · DS111</span>
+          <span class="ctx-chip">📍 LR2</span>
+          <span class="ctx-chip">4 students</span>
+        </div>
+        <a href="../../index.html" class="ctx-change-btn">⇄ Change Section</a>
+      </div>
+
+      <div class="settings-wrap">
+
+        <div class="view-header">
+          <div>
+            <div class="view-title">⚙️ Settings</div>
+            <div class="view-sub">Preferences · WMSU AttendTrack</div>
+          </div>
+          <button class="btn-export">💾 Save Changes</button>
+        </div>
+
+        <div class="settings-scroll">
+
+          <!-- Session Configuration -->
+          <div class="settings-group">
+            <div class="settings-group-title">📅 Session Configuration</div>
+            <div class="settings-group-body">
+              <div class="settings-row">
+                <div class="settings-label">
+                  <div class="settings-label-title">Session Name</div>
+                  <div class="settings-label-sub">Label shown in the header bar</div>
+                </div>
+                <input class="settings-input" type="text" value="Morning Session">
+              </div>
+              <div class="settings-row">
+                <div class="settings-label">
+                  <div class="settings-label-title">Session Start Time</div>
+                  <div class="settings-label-sub">Students arriving after grace period are marked Late</div>
+                </div>
+                <input class="settings-input" type="time" value="10:00">
+              </div>
+              <div class="settings-row">
+                <div class="settings-label">
+                  <div class="settings-label-title">Late Grace Period (minutes)</div>
+                  <div class="settings-label-sub">Minutes after start time before "Late" applies</div>
+                </div>
+                <input class="settings-input narrow" type="number" min="0" max="60" value="15">
+              </div>
+              <div class="settings-row">
+                <div class="settings-label">
+                  <div class="settings-label-title">Academic Year</div>
+                  <div class="settings-label-sub">e.g. 2025 – 2026</div>
+                </div>
+                <input class="settings-input narrow" type="text" value="2025 – 2026">
+              </div>
+            </div>
+          </div>
+
+          <!-- Scanner Options -->
+          <div class="settings-group">
+            <div class="settings-group-title">📷 Scanner Options</div>
+            <div class="settings-group-body">
+              <div class="settings-row">
+                <div class="settings-label">
+                  <div class="settings-label-title">Auto-start Camera on Load</div>
+                  <div class="settings-label-sub">Activate camera when opening QR Scanner</div>
+                </div>
+                <label class="toggle-switch"><input type="checkbox" checked><span class="toggle-track"><span class="toggle-thumb"></span></span></label>
+              </div>
+              <div class="settings-row">
+                <div class="settings-label">
+                  <div class="settings-label-title">Sound on Successful Scan</div>
+                  <div class="settings-label-sub">Play a beep when a student is recorded</div>
+                </div>
+                <label class="toggle-switch"><input type="checkbox" checked><span class="toggle-track"><span class="toggle-thumb"></span></span></label>
+              </div>
+              <div class="settings-row">
+                <div class="settings-label">
+                  <div class="settings-label-title">Prevent Duplicate Scans</div>
+                  <div class="settings-label-sub">Block same student from logging more than once</div>
+                </div>
+                <label class="toggle-switch"><input type="checkbox" checked><span class="toggle-track"><span class="toggle-thumb"></span></span></label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Notifications -->
+          <div class="settings-group">
+            <div class="settings-group-title">🔔 Notifications</div>
+            <div class="settings-group-body">
+              <div class="settings-row">
+                <div class="settings-label">
+                  <div class="settings-label-title">Show Toast Notifications</div>
+                  <div class="settings-label-sub">Pop-up alerts when a scan is recorded</div>
+                </div>
+                <label class="toggle-switch"><input type="checkbox" checked><span class="toggle-track"><span class="toggle-thumb"></span></span></label>
+              </div>
+              <div class="settings-row">
+                <div class="settings-label">
+                  <div class="settings-label-title">Alert on Low Attendance</div>
+                  <div class="settings-label-sub">Warn when attendance falls below threshold</div>
+                </div>
+                <label class="toggle-switch"><input type="checkbox"><span class="toggle-track"><span class="toggle-thumb"></span></span></label>
+              </div>
+              <div class="settings-row">
+                <div class="settings-label">
+                  <div class="settings-label-title">Low Attendance Threshold (%)</div>
+                  <div class="settings-label-sub">Alert when attendance drops below this value</div>
+                </div>
+                <input class="settings-input narrow" type="number" min="0" max="100" value="75">
+              </div>
+            </div>
+          </div>
+
+          <!-- Teacher Account -->
+          <div class="settings-group">
+            <div class="settings-group-title">👤 Teacher Account</div>
+            <div class="settings-group-body">
+              <div class="settings-row">
+                <div class="settings-label">
+                  <div class="settings-label-title">Display Name</div>
+                  <div class="settings-label-sub">Name shown in the sidebar footer</div>
+                </div>
+                <input class="settings-input" type="text" value="Mr. Santos">
+              </div>
+              <div class="settings-row">
+                <div class="settings-label">
+                  <div class="settings-label-title">Role / Department</div>
+                  <div class="settings-label-sub">Subtitle shown under the display name</div>
+                </div>
+                <input class="settings-input" type="text" value="Faculty · CCS Department">
+              </div>
+              <div class="settings-row">
+                <div class="settings-label">
+                  <div class="settings-label-title">Change Password</div>
+                  <div class="settings-label-sub">Leave blank to keep current password</div>
+                </div>
+                <input class="settings-input" type="password" placeholder="New password…">
+              </div>
+            </div>
+          </div>
+
+          <!-- Danger Zone -->
+          <div class="settings-group danger-group">
+            <div class="settings-group-title">⚠️ Danger Zone</div>
+            <div class="settings-group-body">
+              <div class="settings-row">
+                <div class="settings-label">
+                  <div class="settings-label-title">Clear All Attendance Records</div>
+                  <div class="settings-label-sub">Delete all scanned records for this session</div>
+                </div>
+                <button class="btn-danger">🗑 Clear Records</button>
+              </div>
+              <div class="settings-row">
+                <div class="settings-label">
+                  <div class="settings-label-title">Reset to Defaults</div>
+                  <div class="settings-label-sub">Restore all settings to factory defaults</div>
+                </div>
+                <button class="btn-danger">↺ Reset</button>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- end settings-scroll -->
+      </div><!-- end settings-wrap -->
+    </main>
+  </div>
+</div>
+</body>
+</html>

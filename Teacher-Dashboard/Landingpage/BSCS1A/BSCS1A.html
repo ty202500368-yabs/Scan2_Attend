@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WMSU AttendTrack — QR Scanner</title>
+<link rel="stylesheet" href="../styledestop.css">
+<link rel="stylesheet" href="../portal-base.css">
+</head>
+<body>
+<input type="checkbox" class="ctrl" id="mob-menu">
+<label for="mob-menu" class="mob-overlay"></label>
+
+<div class="app">
+  <header class="header">
+    <div class="header-brand">
+      <label for="mob-menu" class="hamburger"><span></span><span></span><span></span></label>
+      <div class="header-logo"><img src="../wmsulogo.jpg" alt="WMSU"></div>
+      <div>
+        <div class="header-title">WMSU AttendTrack</div>
+        <div class="header-sub">Teacher Portal</div>
+      </div>
+    </div>
+    <div class="header-right">
+      <div class="header-section-badge">📗 BSCS 1A</div>
+      <div class="session-chip">📗 &nbsp;Morning Session · 10:00 - 11:00 AM</div>
+      <div class="live-pill"><span class="live-dot"></span> Live</div>
+    </div>
+  </header>
+
+  <div class="body-layout">
+    <aside class="sidebar">
+      <div class="sidebar-section-label">Active Section</div>
+      <div class="sec-chip">
+        <div class="sec-chip-label">Section</div>
+        <div class="sec-chip-name">BSCS 1A</div>
+        <div class="sec-chip-sub">BS Computer Science</div>
+      </div>
+
+      <div class="sidebar-section-label nav-label-top">Navigation</div>
+      <nav class="sidebar-nav">
+        <a href="BSCS1A.html"   class="nav-item active"><span class="nav-icon">⛶</span> QR Scanner</a>
+        <a href="BSCS1Adashboard.html" class="nav-item"><span class="nav-icon">📊</span> Dashboard</a>
+        <a href="schedule.html"  class="nav-item"><span class="nav-icon">🗓️</span> Schedule</a>
+        <div class="nav-divider"></div>
+        <a href="../../index.html"     class="nav-item"><span class="nav-icon">🏫</span> Change Section</a>
+        <a href="#"              class="nav-item"><span class="nav-icon">⬇</span> Export CSV</a>
+        <div class="nav-divider"></div>
+        <a href="settings.html"  class="nav-item"><span class="nav-icon">⚙️</span> Settings</a>
+        <a href="../../index.html"     class="nav-item"><span class="nav-icon">🔒</span> Logout</a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="admin-chip">
+          <div class="admin-avatar">TC</div>
+          <div>
+            <div class="admin-name">Mr. Santos</div>
+            <div class="admin-role">Faculty · CCS Department</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="portal-main">
+      <div class="ctx-bar">
+        <div class="ctx-left">
+          <span class="ctx-icon">📗</span>
+          <div>
+            <div class="ctx-name">BSCS 1A</div>
+            <div class="ctx-meta">Bachelor of Science in Computer Science · First Semester</div>
+          </div>
+        </div>
+        <div class="ctx-chips">
+          <span class="ctx-chip">🕗 10–11 AM · DS111</span>
+          <span class="ctx-chip">📍 LR2</span>
+          <span class="ctx-chip">4 students</span>
+        </div>
+        <a href="../../index.html" class="ctx-change-btn">⇄ Change Section</a>
+      </div>
+      <div class="scanner-grid">
+
+        <div class="left-panel">
+
+          <div class="card">
+            <div class="cam-card-header">
+              <div class="cam-card-title">QR Camera Scanner</div>
+              <div class="cam-status-pill"><span class="cam-status-dot"></span>Scanning…</div>
+            </div>
+            <div class="cam-viewport">
+              <div class="cam-brackets"><div class="cbr"></div><div class="cbl"></div></div>
+              <div class="scan-beam"></div>
+              <div class="scan-flash">
+                <div class="flash-icon">✅</div>
+                <div class="flash-name">Regan Kalnain</div>
+                <div class="flash-sub">BSCS 1A — Present</div>
+              </div>
+            </div>
+            <div class="cam-controls">
+              <button class="btn-cam btn-start-cam">⛶ Start Camera</button>
+              <button class="btn-cam btn-stop-cam">⏹ Stop</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-title">Manual Entry</div>
+            <div class="manual-hint">Type a Student ID if the QR code cannot be scanned.</div>
+            <div class="manual-row">
+              <input class="manual-input" type="text" placeholder="e.g. WMSU-2024-001">
+              <button class="btn-add">Add ➔</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-title">Session Summary</div>
+            <div class="stats-row">
+              <div class="stat-mini"><div class="stat-mini-num">3</div><div class="stat-mini-label">Present</div></div>
+              <div class="stat-mini"><div class="stat-mini-num">1</div><div class="stat-mini-label">Late</div></div>
+              <div class="stat-mini"><div class="stat-mini-num">100%</div><div class="stat-mini-label">Rate</div></div>
+            </div>
+          </div>
+
+        </div>
+        <div class="right-panel">
+          <div class="kpi-grid">
+            <div class="kpi-card"><div class="kpi-icon-wrap green">✅</div><div><div class="kpi-val green">3</div><div class="kpi-lbl">Present Today</div></div></div>
+            <div class="kpi-card"><div class="kpi-icon-wrap red">❌</div><div><div class="kpi-val red">0</div><div class="kpi-lbl">Not Scanned</div></div></div>
+            <div class="kpi-card"><div class="kpi-icon-wrap orange">⏰</div><div><div class="kpi-val orange">1</div><div class="kpi-lbl">Late Arrivals</div></div></div>
+            <div class="kpi-card"><div class="kpi-icon-wrap maroon">📈</div><div><div class="kpi-val maroon">100%</div><div class="kpi-lbl">Attendance Rate</div></div></div>
+          </div>
+          <div class="log-card">
+            <div class="log-header">
+              <div class="log-title">Attendance Log</div>
+              <div class="log-actions">
+                <div class="search-box">🔍&nbsp;<input type="text" placeholder="Search name or ID…"></div>
+                <button class="btn-export">⬇ Export CSV</button>
+                <button class="btn-clear-log">🗑 Clear</button>
+              </div>
+            </div>
+            <div class="table-scroll">
+              <table>
+                <thead>
+                  <tr><th>#</th><th>Student</th><th>Student ID</th><th>Time In</th><th>Status</th><th></th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="td-num">1</td>
+                    <td><div class="td-student"><div class="row-avatar">RK</div><div><div class="row-name">Regan Kalnain</div><div class="row-sub">BSCS 1A</div></div></div></td>
+                    <td class="td-id">WMSU-2025-001</td>
+                    <td class="td-time">8:09 AM</td>
+                    <td><span class="badge present">● Present</span></td>
+                    <td><button class="btn-remove">✕</button></td>
+                  </tr>
+                  <tr>
+                    <td class="td-num">2</td>
+                    <td><div class="td-student"><div class="row-avatar">CY</div><div><div class="row-name">Christoper Yabo</div><div class="row-sub">BSCS 1A</div></div></div></td>
+                    <td class="td-id">WMSU-2025-002</td>
+                    <td class="td-time">8:11 AM</td>
+                    <td><span class="badge present">● Present</span></td>
+                    <td><button class="btn-remove">✕</button></td>
+                  </tr>
+                  <tr>
+                    <td class="td-num">3</td>
+                    <td><div class="td-student"><div class="row-avatar">JS</div><div><div class="row-name">Jasmir Saddalani</div><div class="row-sub">BSCS 1A</div></div></div></td>
+                    <td class="td-id">WMSU-2025-003</td>
+                    <td class="td-time">8:26 AM</td>
+                    <td><span class="badge late">⏰ Late</span></td>
+                    <td><button class="btn-remove">✕</button></td>
+                  </tr>
+                  <tr>
+                    <td class="td-num">4</td>
+                    <td><div class="td-student"><div class="row-avatar">AC</div><div><div class="row-name">Aries Cabato</div><div class="row-sub">BSCS 1A</div></div></div></td>
+                    <td class="td-id">WMSU-2025-004</td>
+                    <td class="td-time">8:13 AM</td>
+                    <td><span class="badge present">● Present</span></td>
+                    <td><button class="btn-remove">✕</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+</body>
+</html>
