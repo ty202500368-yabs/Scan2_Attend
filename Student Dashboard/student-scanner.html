@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WMSU AttendTrack — My QR Code</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="portal.css">
+
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="sb-brand">
+      <div class="sb-logo"><img src="wmsulogo.jpg" alt="WMSU"></div>
+      <div class="sb-brand-text"><div class="sb-title">AttendTrack</div><div class="sb-sub">Student Portal</div></div>
+    </div>
+    <div class="sb-student">
+      <div class="sb-student-name">Regan Kalnain</div>
+      <div class="sb-student-id">WMSU-2025-001</div>
+      <div class="sb-student-sec">BSCS 1B · CCS Dept.</div>
+    </div>
+    <nav class="sb-nav">
+      <div class="sb-nav-label">Navigation</div>
+      <a href="student-index.html" class="nav-item"><span class="nav-item-icon">🏠</span><span class="nav-item-text">Home</span></a>
+      <a href="student-scanner.html" class="nav-item active"><span class="nav-item-icon">⛶</span><span class="nav-item-text">My QR Code</span></a>
+      <a href="student-dashboard.html" class="nav-item"><span class="nav-item-icon">📊</span><span class="nav-item-text">My Attendance</span></a>
+      <a href="student-settings.html" class="nav-item"><span class="nav-item-icon">⚙️</span><span class="nav-item-text">Settings</span></a>
+    </nav>
+    <div class="sb-footer"><div class="sb-logout"><span class="nav-item-icon">🚪</span><span>Log Out</span></div></div>
+  </aside>
+
+  <div class="main">
+    <header class="top-bar">
+      <div><div class="tb-page-title">My QR Code</div><div class="tb-breadcrumb">Show to teacher to record attendance</div></div>
+      <div class="tb-right"><div class="tb-section-chip">🎓 BSCS 1B</div><div class="tb-avatar">RK</div></div>
+    </header>
+    <header class="mobile-topbar">
+      <div class="mtb-brand">
+        <div class="mtb-logo"><img src="wmsulogo.jpg" alt="WMSU"></div>
+        <div><div class="mtb-title">AttendTrack</div><div class="mtb-sub">Student Portal</div></div>
+      </div>
+      <div class="mtb-chip">🎓 BSCS 1B</div>
+    </header>
+
+    <div class="page-body">
+      <div class="page-content">
+        <div class="qr-layout">
+
+          <!-- QR CARD -->
+          <div class="qr-main-card">
+            <div class="qr-card-label">Your Personal QR Code</div>
+            <div class="qr-box">
+              <div class="qr-pulse"></div>
+              <div class="cm tl"></div><div class="cm tr"></div><div class="cm bl"></div>
+              <div class="qr-dots">
+                <div class="d db"></div><div class="d dw"></div><div class="d db"></div><div class="d dw"></div><div class="d db"></div><div class="d db"></div><div class="d dw"></div><div class="d db"></div>
+                <div class="d dw"></div><div class="d db"></div><div class="d dw"></div><div class="d db"></div><div class="d dw"></div><div class="d db"></div><div class="d db"></div><div class="d dw"></div>
+                <div class="d db"></div><div class="d dw"></div><div class="d db"></div><div class="d db"></div><div class="d dw"></div><div class="d dw"></div><div class="d db"></div><div class="d dw"></div>
+                <div class="d dw"></div><div class="d db"></div><div class="d db"></div><div class="d dw"></div><div class="d db"></div><div class="d dw"></div><div class="d dw"></div><div class="d db"></div>
+                <div class="d db"></div><div class="d db"></div><div class="d dw"></div><div class="d db"></div><div class="d dw"></div><div class="d db"></div><div class="d dw"></div><div class="d dw"></div>
+                <div class="d dw"></div><div class="d dw"></div><div class="d db"></div><div class="d dw"></div><div class="d db"></div><div class="d db"></div><div class="d db"></div><div class="d dw"></div>
+                <div class="d db"></div><div class="d dw"></div><div class="d db"></div><div class="d db"></div><div class="d dw"></div><div class="d dw"></div><div class="d db"></div><div class="d db"></div>
+                <div class="d dw"></div><div class="d db"></div><div class="d dw"></div><div class="d dw"></div><div class="d db"></div><div class="d db"></div><div class="d dw"></div><div class="d db"></div>
+              </div>
+            </div>
+            <div class="qr-right-info" style="text-align:center">
+              <div class="qr-name">Regan Kalnain</div>
+              <div class="qr-id">WMSU-2025-001</div>
+            </div>
+            <div class="qr-section-chip">📘 BSCS 1B · CCS Department</div>
+            <div class="qr-tip">Hold your screen steady while the teacher scans your code.</div>
+          </div>
+
+          <!-- RIGHT PANEL -->
+          <div class="qr-right">
+            <div class="sec-label">This Week</div>
+            <div class="kpi-row3">
+              <div class="kpi3"><div class="kpi3-icon">✅</div><div class="kpi3-val g">4</div><div class="kpi3-lbl">Present</div></div>
+              <div class="kpi3"><div class="kpi3-icon">❌</div><div class="kpi3-val r">1</div><div class="kpi3-lbl">Absent</div></div>
+              <div class="kpi3"><div class="kpi3-icon">📈</div><div class="kpi3-val m">83%</div><div class="kpi3-lbl">Rate</div></div>
+            </div>
+
+            <div class="sec-label">Today's Status</div>
+            <div class="log-list">
+              <div class="log-row"><div class="log-icon">📘</div><div class="log-info"><div class="log-subj">Discrete Structures 1</div><div class="log-time">8:09 AM · LR2</div></div><div class="badge p">● Present</div></div>
+              <div class="log-row"><div class="log-icon">💻</div><div class="log-info"><div class="log-subj">Computer Programming 1</div><div class="log-time">7:03 AM · LR1</div></div><div class="badge p">● Present</div></div>
+              <div class="log-row"><div class="log-icon">🌐</div><div class="log-info"><div class="log-subj">Web Development</div><div class="log-time">10:00 AM · LAB3</div></div><div class="badge u">⏳ Upcoming</div></div>
+              <div class="log-row"><div class="log-icon">🔷</div><div class="log-info"><div class="log-subj">OOP</div><div class="log-time">No class today</div></div><div class="badge u">— No Class</div></div>
+            </div>
+
+            <div class="instruct-card">
+              <div class="instruct-title">How to use your QR code</div>
+              <div class="instruct-step"><div class="instruct-num">1</div><div class="instruct-text">Open this page when your teacher is ready to take attendance.</div></div>
+              <div class="instruct-step"><div class="instruct-num">2</div><div class="instruct-text">Hold your phone steady and face the screen toward the teacher's scanner.</div></div>
+              <div class="instruct-step"><div class="instruct-num">3</div><div class="instruct-text">Wait for confirmation — your attendance will update automatically.</div></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <nav class="bottom-nav">
+    <a href="student-index.html" class="bnav-tab"><div class="bnav-icon">🏠</div><span>Home</span></a>
+    <a href="student-scanner.html" class="bnav-tab active"><div class="bnav-icon">⛶</div><span>QR Code</span></a>
+    <a href="student-dashboard.html" class="bnav-tab"><div class="bnav-icon">📊</div><span>Attendance</span></a>
+    <a href="student-settings.html" class="bnav-tab"><div class="bnav-icon">⚙️</div><span>Settings</span></a>
+  </nav>
+</div>
+</body>
+</html>

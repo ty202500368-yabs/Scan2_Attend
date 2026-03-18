@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WMSU AttendTrack — Settings</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="portal.css">
+
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="sb-brand">
+      <div class="sb-logo"><img src="wmsulogo.jpg" alt="WMSU"></div>
+      <div class="sb-brand-text"><div class="sb-title">AttendTrack</div><div class="sb-sub">Student Portal</div></div>
+    </div>
+    <div class="sb-student">
+      <div class="sb-student-name">Regan Kalnain</div>
+      <div class="sb-student-id">WMSU-2025-001</div>
+      <div class="sb-student-sec">BSCS 1B · CCS Dept.</div>
+    </div>
+    <nav class="sb-nav">
+      <div class="sb-nav-label">Navigation</div>
+      <a href="student-index.html" class="nav-item"><span class="nav-item-icon">🏠</span><span class="nav-item-text">Home</span></a>
+      <a href="student-scanner.html" class="nav-item"><span class="nav-item-icon">⛶</span><span class="nav-item-text">My QR Code</span></a>
+      <a href="student-dashboard.html" class="nav-item"><span class="nav-item-icon">📊</span><span class="nav-item-text">My Attendance</span></a>
+      <a href="student-settings.html" class="nav-item active"><span class="nav-item-icon">⚙️</span><span class="nav-item-text">Settings</span></a>
+    </nav>
+    <div class="sb-footer"><div class="sb-logout"><span class="nav-item-icon">🚪</span><span>Log Out</span></div></div>
+  </aside>
+
+  <div class="main">
+    <header class="top-bar">
+      <div><div class="tb-page-title">Settings</div><div class="tb-breadcrumb">Account & Preferences</div></div>
+      <div class="tb-right"><div class="tb-section-chip">🎓 BSCS 1B</div><div class="tb-avatar">RK</div></div>
+    </header>
+    <header class="mobile-topbar">
+      <div class="mtb-brand">
+        <div class="mtb-logo"><img src="wmsulogo.jpg" alt="WMSU"></div>
+        <div><div class="mtb-title">AttendTrack</div><div class="mtb-sub">Student Portal</div></div>
+      </div>
+      <div class="mtb-chip">🎓 BSCS 1B</div>
+    </header>
+
+    <div class="page-body">
+      <div class="page-content">
+        <div class="settings-layout">
+
+          <!-- LEFT: PROFILE CARD -->
+          <div class="profile-card">
+            <div class="profile-hero-band">
+              <div class="ph-avatar">RK</div>
+              <div class="ph-name">Regan Kalnain</div>
+              <div class="ph-id">WMSU-2025-001</div>
+              <div class="ph-sec">BSCS 1B · CCS Department</div>
+            </div>
+            <div class="profile-stats">
+              <div class="pstat"><div class="pstat-val g">48</div><div class="pstat-lbl">Present</div></div>
+              <div class="pstat"><div class="pstat-val o">6</div><div class="pstat-lbl">Late</div></div>
+              <div class="pstat"><div class="pstat-val r">4</div><div class="pstat-lbl">Absent</div></div>
+            </div>
+          </div>
+
+          <!-- RIGHT: SETTINGS -->
+          <div class="settings-col">
+
+            <div class="save-bar"><button class="btn-save">💾 Save Changes</button></div>
+
+            <!-- PROFILE -->
+            <div class="sg">
+              <div class="sg-title">👤 My Profile</div>
+              <div class="sg-row"><div class="sg-label"><div class="sg-label-title">Full Name</div><div class="sg-label-sub">Appears on attendance records</div></div><input class="sg-input" type="text" value="Regan Kalnain"></div>
+              <div class="sg-row"><div class="sg-label"><div class="sg-label-title">Student ID</div><div class="sg-label-sub">Read-only</div></div><input class="sg-input narrow" type="text" value="WMSU-2025-001" readonly></div>
+              <div class="sg-row"><div class="sg-label"><div class="sg-label-title">Section</div><div class="sg-label-sub">Read-only</div></div><input class="sg-input narrow" type="text" value="BSCS 1B" readonly></div>
+              <div class="sg-row"><div class="sg-label"><div class="sg-label-title">Email</div><div class="sg-label-sub">For notifications</div></div><input class="sg-input" type="email" value="regan.kalnain@wmsu.edu.ph"></div>
+            </div>
+
+            <!-- NOTIFICATIONS -->
+            <div class="sg">
+              <div class="sg-title">🔔 Notifications</div>
+              <div class="sg-row"><div class="sg-label"><div class="sg-label-title">Attendance Confirmed</div><div class="sg-label-sub">Notify when recorded</div></div><label class="toggle"><input type="checkbox" checked><span class="toggle-track"><span class="toggle-thumb"></span></span></label></div>
+              <div class="sg-row"><div class="sg-label"><div class="sg-label-title">Low Attendance Warning</div><div class="sg-label-sub">Alert when rate drops</div></div><label class="toggle"><input type="checkbox" checked><span class="toggle-track"><span class="toggle-thumb"></span></span></label></div>
+              <div class="sg-row"><div class="sg-label"><div class="sg-label-title">Warning Threshold (%)</div><div class="sg-label-sub">Alert below this value</div></div><input class="sg-input narrow" type="number" min="0" max="100" value="75"></div>
+              <div class="sg-row"><div class="sg-label"><div class="sg-label-title">Marked Absent Alerts</div><div class="sg-label-sub">Notify when marked absent</div></div><label class="toggle"><input type="checkbox"><span class="toggle-track"><span class="toggle-thumb"></span></span></label></div>
+            </div>
+
+            <!-- QR CODE -->
+            <div class="sg">
+              <div class="sg-title">⛶ QR Code</div>
+              <div class="sg-row"><div class="sg-label"><div class="sg-label-title">Keep Screen Bright</div><div class="sg-label-sub">Prevent dimming while showing QR</div></div><label class="toggle"><input type="checkbox" checked><span class="toggle-track"><span class="toggle-thumb"></span></span></label></div>
+              <div class="sg-row"><div class="sg-label"><div class="sg-label-title">Show Name on QR Page</div><div class="sg-label-sub">Display name below code</div></div><label class="toggle"><input type="checkbox" checked><span class="toggle-track"><span class="toggle-thumb"></span></span></label></div>
+            </div>
+
+            <!-- SECURITY -->
+            <div class="sg">
+              <div class="sg-title">🔐 Security</div>
+              <div class="sg-row"><div class="sg-label"><div class="sg-label-title">New Password</div><div class="sg-label-sub">Leave blank to keep current</div></div><input class="sg-input" type="password" placeholder="New password…"></div>
+              <div class="sg-row"><div class="sg-label"><div class="sg-label-title">Confirm Password</div><div class="sg-label-sub">Re-enter to confirm</div></div><input class="sg-input" type="password" placeholder="Confirm…"></div>
+            </div>
+
+            <!-- DANGER -->
+            <div class="sg danger">
+              <div class="sg-title">⚠️ Danger Zone</div>
+              <div class="sg-row"><div class="sg-label"><div class="sg-label-title">Reset Notifications</div><div class="sg-label-sub">Restore notification defaults</div></div><button class="btn-danger">↺ Reset</button></div>
+              <div class="sg-row"><div class="sg-label"><div class="sg-label-title">Log Out All Devices</div><div class="sg-label-sub">Sign out from all sessions</div></div><button class="btn-danger">🔒 Log Out</button></div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <nav class="bottom-nav">
+    <a href="student-index.html" class="bnav-tab"><div class="bnav-icon">🏠</div><span>Home</span></a>
+    <a href="student-scanner.html" class="bnav-tab"><div class="bnav-icon">⛶</div><span>QR Code</span></a>
+    <a href="student-dashboard.html" class="bnav-tab"><div class="bnav-icon">📊</div><span>Attendance</span></a>
+    <a href="student-settings.html" class="bnav-tab active"><div class="bnav-icon">⚙️</div><span>Settings</span></a>
+  </nav>
+</div>
+</body>
+</html>
