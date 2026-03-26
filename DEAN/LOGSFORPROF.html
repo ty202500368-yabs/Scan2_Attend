@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WMSU AttendTrack - Admin</title>
+  <link rel="stylesheet" href="Logs.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-brand">
+    <div class="header-logo">🏛️</div>
+    <div>
+      <div class="header-title">WMSU AttendTrack</div>
+      <div class="header-sub">Admin / Dean Portal</div>
+    </div>
+  </div>
+  <div class="admin-badge">🛡️ Admin Panel</div>
+</div>
+
+<!-- BODY -->
+<div class="body-layout">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+
+    <div class="sidebar-label">Portal</div>
+    <div class="role-box">
+      <div class="role-name">Admin / Dean</div>
+      <div class="role-sub">CCS Department · WMSU</div>
+    </div>
+
+    <div class="sidebar-label">Navigation</div>
+    <ul class="nav-list">
+      <li>
+        <a href="LOGSFORPROF.html" class="active">
+          ✅ Teacher Approvals
+          <span class="nav-badge">2</span>
+        </a>
+      </li>
+      <li><a href="Proflist.html">👨‍🏫 Teacher List</a></li>
+      <li><a href="ApprovalHist.html">🕓 Approval History</a></li>
+      <hr class="nav-divider">
+      <li><a href="#">⚙️ Settings</a></li>
+      <li><a href="LogOut.html">🔒 Logout</a></li>
+    </ul>
+
+    <div class="sidebar-footer">
+      <div class="avatar">DN</div>
+      <div>
+        <div class="footer-name">Dean Navarro</div>
+        <div class="footer-role">Administrator · CCS</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- MAIN -->
+  <div class="main-content">
+
+    <!-- context bar -->
+    <div class="ctx-bar">
+      <span style="font-size:18px;">✅</span>
+      <div>
+        <div class="ctx-title">Teacher Registration Approvals</div>
+        <div class="ctx-sub">Manage faculty account requests · CCS Department · AY 2025–2026</div>
+      </div>
+    </div>
+
+    <!-- KPI cards -->
+    <div class="kpi-row">
+      <div class="kpi-card">
+        <div class="kpi-icon maroon">👨‍🏫</div>
+        <div>
+          <div class="kpi-num maroon">5</div>
+          <div class="kpi-label">Total Registered</div>
+        </div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-icon orange">⏳</div>
+        <div>
+          <div class="kpi-num orange">2</div>
+          <div class="kpi-label">Pending Approval</div>
+        </div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-icon green">✅</div>
+        <div>
+          <div class="kpi-num green">2</div>
+          <div class="kpi-label">Total Active</div>
+        </div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-icon red">❌</div>
+        <div>
+          <div class="kpi-num red">1</div>
+          <div class="kpi-label">Total Rejected</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- panels -->
+    <div class="panels">
+
+      <!-- LEFT: table -->
+      <div class="table-card">
+        <div class="table-card-header">
+          <div class="table-card-top">
+            <div class="table-card-title">📋 Faculty Registration Log</div>
+            <div class="table-actions">
+              <input class="search-input" type="text" placeholder="🔍 Search teacher...">
+              <button class="btn-export">⬇ Export CSV</button>
+            </div>
+          </div>
+          <div class="filter-row">
+            <button class="f-btn all">All (5)</button>
+            <button class="f-btn active">● Active (2)</button>
+            <button class="f-btn pending">⏳ Pending (2)</button>
+            <button class="f-btn rejected">❌ Rejected (1)</button>
+          </div>
+        </div>
+
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Teacher</th>
+                <th>Status</th>
+                <th>Assigned Sections</th>
+                <th>Date Registered</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <!-- pending 1 -->
+              <tr>
+                <td style="color:#bbbbbb;font-size:11px;">1</td>
+                <td>
+                  <div class="teacher-cell">
+                    <div class="t-avatar">AL</div>
+                    <div>
+                      <div class="t-name">Mr. Lim <span class="new-tag">New</span></div>
+                      <div class="t-email">a.lim@wmsu.edu.ph</div>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="badge pending">⏳ Pending</span></td>
+                <td>
+                  <div class="chips">
+                    <span class="chip">BSCS 2A</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="date-main">Mar 15, 2026</div>
+                  <div class="date-sub">9:14 AM</div>
+                </td>
+                <td>
+                  <div class="action-wrap">
+                    <button class="btn-approve">✔ Approve</button>
+                    <button class="btn-reject">✕ Reject</button>
+                  </div>
+                </td>
+              </tr>
+
+              <!-- pending 2 -->
+              <tr>
+                <td style="color:#bbbbbb;font-size:11px;">2</td>
+                <td>
+                  <div class="teacher-cell">
+                    <div class="t-avatar" style="background-color:#8e44ad;">JM</div>
+                    <div>
+                      <div class="t-name">Ms. Mateo <span class="new-tag">New</span></div>
+                      <div class="t-email">j.mateo@wmsu.edu.ph</div>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="badge pending">⏳ Pending</span></td>
+                <td>
+                  <div class="chips">
+                    <span class="chip">BSIT 3B</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="date-main">Mar 16, 2026</div>
+                  <div class="date-sub">11:30 AM</div>
+                </td>
+                <td>
+                  <div class="action-wrap">
+                    <button class="btn-approve">✔ Approve</button>
+                    <button class="btn-reject">✕ Reject</button>
+                  </div>
+                </td>
+              </tr>
+
+              <!-- active 1 -->
+              <tr>
+                <td style="color:#bbbbbb;font-size:11px;">3</td>
+                <td>
+                  <div class="teacher-cell">
+                    <div class="t-avatar" style="background-color:#1e7a45;">MS</div>
+                    <div>
+                      <div class="t-name">Mr. Santos</div>
+                      <div class="t-email">j.santos@wmsu.edu.ph</div>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <span class="badge active">
+                    <span class="dot"></span>Active
+                  </span>
+                </td>
+                <td>
+                  <div class="chips">
+                    <span class="chip">BSCS 1A</span>
+                    <span class="chip">BSCS 1B</span>
+                    <span class="chip">BSIT 1A</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="date-main">Aug 12, 2025</div>
+                  <div class="date-sub">9:30 AM</div>
+                </td>
+                <td>
+                  <div class="action-wrap">
+                    <button class="btn-off">✔ Approve</button>
+                    <button class="btn-reject">✕ Reject</button>
+                  </div>
+                </td>
+              </tr>
+
+              <!-- active 2 -->
+              <tr>
+                <td style="color:#bbbbbb;font-size:11px;">4</td>
+                <td>
+                  <div class="teacher-cell">
+                    <div class="t-avatar" style="background-color:#1a73b8;">RD</div>
+                    <div>
+                      <div class="t-name">Ms. Dela Cruz</div>
+                      <div class="t-email">r.delacruz@wmsu.edu.ph</div>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <span class="badge active">
+                    <span class="dot"></span>Active
+                  </span>
+                </td>
+                <td>
+                  <div class="chips">
+                    <span class="chip">BSIT 1A</span>
+                    <span class="chip">BSIT 2A</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="date-main">Sep 3, 2025</div>
+                  <div class="date-sub">2:15 PM</div>
+                </td>
+                <td>
+                  <div class="action-wrap">
+                    <button class="btn-off">✔ Approve</button>
+                    <button class="btn-reject">✕ Reject</button>
+                  </div>
+                </td>
+              </tr>
+
+              <!-- rejected -->
+              <tr>
+                <td style="color:#bbbbbb;font-size:11px;">5</td>
+                <td>
+                  <div class="teacher-cell">
+                    <div class="t-avatar" style="background-color:#888888;">MR</div>
+                    <div>
+                      <div class="t-name">Dr. Reyes</div>
+                      <div class="t-email">m.reyes@wmsu.edu.ph</div>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="badge rejected">❌ Rejected</span></td>
+                <td>
+                  <div class="chips">
+                    <span class="chip">BSCS 3A</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="date-main">Mar 10, 2026</div>
+                  <div class="date-sub">8:00 AM</div>
+                </td>
+                <td>
+                  <div class="action-wrap">
+                    <button class="btn-approve">✔ Approve</button>
+                    <button class="btn-off">✕ Reject</button>
+                  </div>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+
+        <div class="table-footer">
+          <div class="footer-stat">
+            <div class="footer-num" style="color:#800000;">5</div>
+            <div class="footer-lbl">Total</div>
+          </div>
+          <div class="footer-stat">
+            <div class="footer-num" style="color:#cc6600;">2</div>
+            <div class="footer-lbl">Pending</div>
+          </div>
+          <div class="footer-stat">
+            <div class="footer-num" style="color:#006633;">2</div>
+            <div class="footer-lbl">Active</div>
+          </div>
+          <div class="footer-stat">
+            <div class="footer-num" style="color:#cc0000;">1</div>
+            <div class="footer-lbl">Rejected</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: approval history -->
+      <div class="history-card">
+        <div class="history-card-header">
+          <div class="history-card-title">🕓 Approval History</div>
+          <div class="history-card-sub">Recent actions by Admin / Dean</div>
+        </div>
+
+        <div class="history-list">
+
+          <div class="h-row">
+            <div class="h-icon approved">✅</div>
+            <div style="flex:1;">
+              <div class="h-name">Ms. Dela Cruz</div>
+              <div class="h-action">Set to <span class="ha approved">Active</span> by Dean Navarro</div>
+            </div>
+            <div class="h-time">Sep 4, 2025</div>
+          </div>
+
+          <div class="h-row">
+            <div class="h-icon approved">✅</div>
+            <div style="flex:1;">
+              <div class="h-name">Mr. Santos</div>
+              <div class="h-action">Set to <span class="ha approved">Active</span> by Dean Navarro</div>
+            </div>
+            <div class="h-time">Aug 13, 2025</div>
+          </div>
+
+          <div class="h-row">
+            <div class="h-icon rejected">❌</div>
+            <div style="flex:1;">
+              <div class="h-name">Dr. Reyes</div>
+              <div class="h-action">Registration <span class="ha rejected">Rejected</span> by Dean Navarro</div>
+            </div>
+            <div class="h-time">Mar 11, 2026</div>
+          </div>
+
+          <div class="h-row">
+            <div class="h-icon pending">⏳</div>
+            <div style="flex:1;">
+              <div class="h-name">Ms. Mateo</div>
+              <div class="h-action">Registration <span class="ha pending">Pending</span> — awaiting review</div>
+            </div>
+            <div class="h-time">Mar 16, 2026</div>
+          </div>
+
+          <div class="h-row">
+            <div class="h-icon pending">⏳</div>
+            <div style="flex:1;">
+              <div class="h-name">Mr. Lim</div>
+              <div class="h-action">Registration <span class="ha pending">Pending</span> — awaiting review</div>
+            </div>
+            <div class="h-time">Mar 15, 2026</div>
+          </div>
+
+        </div>
+
+        <div class="history-footer">
+          <span>Total actions logged</span>
+          <b>5 entries</b>
+        </div>
+      </div>
+
+    </div><!-- end panels -->
+
+  </div><!-- end main -->
+
+</div><!-- end body-layout -->
+
+</body>
+</html>

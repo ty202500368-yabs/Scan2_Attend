@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WMSU AttendTrack - Teacher List</title>
+  <link rel="stylesheet" href="Proflist.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-brand">
+    <div class="header-logo">🏛️</div>
+    <div>
+      <div class="header-title">WMSU AttendTrack</div>
+      <div class="header-sub">Admin / Dean Portal</div>
+    </div>
+  </div>
+  <div class="admin-badge">🛡️ Admin Panel</div>
+</div>
+
+<!-- BODY -->
+<div class="body-layout">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+
+    <div class="sidebar-label">Portal</div>
+    <div class="role-box">
+      <div class="role-name">Admin / Dean</div>
+      <div class="role-sub">CCS Department · WMSU</div>
+    </div>
+
+    <div class="sidebar-label">Navigation</div>
+    <ul class="nav-list">
+      <li><a href="LOGSFORPROF.html">✅ Teacher Approvals <span class="nav-badge">2</span></a></li>
+      <li><a href="Proflist.html" class="active">👨‍🏫 Teacher List</a></li>
+      <li><a href="ApprovalHist.html">🕓 Approval History</a></li>
+      <hr class="nav-divider">
+      <li><a href="#">⚙️ Settings</a></li>
+      <li><a href="LogOut.html">🔒 Logout</a></li>
+    </ul>
+
+    <div class="sidebar-footer">
+      <div class="avatar">DN</div>
+      <div>
+        <div class="footer-name">Dean Navarro</div>
+        <div class="footer-role">Administrator · CCS</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- MAIN -->
+  <div class="main-content">
+
+    <!-- context bar -->
+    <div class="ctx-bar">
+      <span style="font-size:18px;">👨‍🏫</span>
+      <div>
+        <div class="ctx-title">Teacher List</div>
+        <div class="ctx-sub">All active faculty members and their assigned sections · CCS Department</div>
+      </div>
+    </div>
+
+    <!-- KPI -->
+    <div class="kpi-row">
+      <div class="kpi-card">
+        <div class="kpi-icon maroon">👨‍🏫</div>
+        <div>
+          <div class="kpi-num maroon">5</div>
+          <div class="kpi-label">Total Teachers</div>
+        </div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-icon orange">⏳</div>
+        <div>
+          <div class="kpi-num orange">2</div>
+          <div class="kpi-label">Total Pending</div>
+        </div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-icon green">✅</div>
+        <div>
+          <div class="kpi-num green">2</div>
+          <div class="kpi-label">Total Approved</div>
+        </div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-icon red">❌</div>
+        <div>
+          <div class="kpi-num red">1</div>
+          <div class="kpi-label">Total Rejected</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- teacher list table -->
+    <div class="table-card">
+      <div class="table-card-header">
+        <div class="table-card-top">
+          <div class="table-card-title">📋 Teachers & Assigned Sections</div>
+          <div class="table-actions">
+            <input class="search-input" type="text" placeholder="🔍 Search teacher...">
+            <button class="btn-export">⬇ Export CSV</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Teacher</th>
+              <th>Assigned Sections</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr>
+              <td class="num-col">1</td>
+              <td>
+                <div class="teacher-cell">
+                  <div class="t-avatar" style="background-color:#1e7a45;">MS</div>
+                  <div>
+                    <div class="t-name">Mr. Santos</div>
+                    <div class="t-email">j.santos@wmsu.edu.ph</div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="chips">
+                  <span class="chip">BSCS 1A</span>
+                  <span class="chip">BSCS 1B</span>
+                  <span class="chip">BSIT 1A</span>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="num-col">2</td>
+              <td>
+                <div class="teacher-cell">
+                  <div class="t-avatar" style="background-color:#1a73b8;">RD</div>
+                  <div>
+                    <div class="t-name">Ms. Dela Cruz</div>
+                    <div class="t-email">r.delacruz@wmsu.edu.ph</div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="chips">
+                  <span class="chip">BSIT 1A</span>
+                  <span class="chip">BSIT 2A</span>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="num-col">3</td>
+              <td>
+                <div class="teacher-cell">
+                  <div class="t-avatar">AL</div>
+                  <div>
+                    <div class="t-name">Mr. Lim <span class="new-tag">New</span></div>
+                    <div class="t-email">a.lim@wmsu.edu.ph</div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="chips">
+                  <span class="chip">BSCS 2A</span>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="num-col">4</td>
+              <td>
+                <div class="teacher-cell">
+                  <div class="t-avatar" style="background-color:#8e44ad;">JM</div>
+                  <div>
+                    <div class="t-name">Ms. Mateo <span class="new-tag">New</span></div>
+                    <div class="t-email">j.mateo@wmsu.edu.ph</div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="chips">
+                  <span class="chip">BSIT 3B</span>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="num-col">5</td>
+              <td>
+                <div class="teacher-cell">
+                  <div class="t-avatar" style="background-color:#888888;">MR</div>
+                  <div>
+                    <div class="t-name">Dr. Reyes</div>
+                    <div class="t-email">m.reyes@wmsu.edu.ph</div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="chips">
+                  <span class="chip">BSCS 3A</span>
+                </div>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+      <div class="table-footer">
+        <div class="footer-stat">
+          <div class="footer-num" style="color:#800000;">5</div>
+          <div class="footer-lbl">Total</div>
+        </div>
+        <div class="footer-stat">
+          <div class="footer-num" style="color:#006633;">2</div>
+          <div class="footer-lbl">Approved</div>
+        </div>
+        <div class="footer-stat">
+          <div class="footer-num" style="color:#cc6600;">2</div>
+          <div class="footer-lbl">Pending</div>
+        </div>
+        <div class="footer-stat">
+          <div class="footer-num" style="color:#cc0000;">1</div>
+          <div class="footer-lbl">Rejected</div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end main -->
+
+</div><!-- end body-layout -->
+
+</body>
+</html>
